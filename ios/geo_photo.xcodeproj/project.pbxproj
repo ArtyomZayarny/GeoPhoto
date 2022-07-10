@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-geo_photo-geo_photoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-geo_photo-geo_photoTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BC3F8EEAB3DC4C92A22F3FC5 /* Sen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74B9114A3072475CB1F61158 /* Sen-Regular.ttf */; };
+		D09E3DA7FCFB498E8EA55112 /* Sen-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54E08D4B46FB497EB437DD8D /* Sen-Bold.ttf */; };
+		D3D7EFD022794F08AF7CFFB5 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C2D2E9E6B9944179AA367FF /* OFL.txt */; };
+		E0002E0246B54BC7BD90CE12 /* Sen-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E465671DE12F46E6A3AD02E6 /* Sen-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +42,15 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = geo_photo/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-geo_photo-geo_photoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-geo_photo-geo_photoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-geo_photo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo_photo.debug.xcconfig"; path = "Target Support Files/Pods-geo_photo/Pods-geo_photo.debug.xcconfig"; sourceTree = "<group>"; };
+		3C2D2E9E6B9944179AA367FF /* OFL.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = OFL.txt; path = ../assets/fonts/OFL.txt; sourceTree = "<group>"; };
+		54E08D4B46FB497EB437DD8D /* Sen-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sen-Bold.ttf"; path = "../assets/fonts/Sen-Bold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-geo_photo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo_photo.release.xcconfig"; path = "Target Support Files/Pods-geo_photo/Pods-geo_photo.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-geo_photo-geo_photoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo_photo-geo_photoTests.debug.xcconfig"; path = "Target Support Files/Pods-geo_photo-geo_photoTests/Pods-geo_photo-geo_photoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-geo_photo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-geo_photo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B9114A3072475CB1F61158 /* Sen-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sen-Regular.ttf"; path = "../assets/fonts/Sen-Regular.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = geo_photo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-geo_photo-geo_photoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo_photo-geo_photoTests.release.xcconfig"; path = "Target Support Files/Pods-geo_photo-geo_photoTests/Pods-geo_photo-geo_photoTests.release.xcconfig"; sourceTree = "<group>"; };
+		E465671DE12F46E6A3AD02E6 /* Sen-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sen-ExtraBold.ttf"; path = "../assets/fonts/Sen-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				FB57A606EB9F44B886F35BFE /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -146,6 +155,18 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-geo_photo-geo_photoTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FB57A606EB9F44B886F35BFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54E08D4B46FB497EB437DD8D /* Sen-Bold.ttf */,
+				E465671DE12F46E6A3AD02E6 /* Sen-ExtraBold.ttf */,
+				74B9114A3072475CB1F61158 /* Sen-Regular.ttf */,
+				3C2D2E9E6B9944179AA367FF /* OFL.txt */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D09E3DA7FCFB498E8EA55112 /* Sen-Bold.ttf in Resources */,
+				E0002E0246B54BC7BD90CE12 /* Sen-ExtraBold.ttf in Resources */,
+				BC3F8EEAB3DC4C92A22F3FC5 /* Sen-Regular.ttf in Resources */,
+				D3D7EFD022794F08AF7CFFB5 /* OFL.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
