@@ -9,10 +9,19 @@ export const Button: React.FC<ButtonProps> = ({text}) => {
   return (
     <View>
       <TouchableOpacity
+        activeOpacity={1}
         style={{
           backgroundColor: backgroundColor,
           borderRadius: 100,
           width: 168,
+          shadowColor: '#000000',
+          shadowOpacity: 0.8,
+          shadowRadius: 2,
+          elevation: 5,
+          shadowOffset: {
+            height: 1,
+            width: 1,
+          },
         }}>
         <Text style={styles.buttonText}>{text}</Text>
       </TouchableOpacity>
@@ -25,9 +34,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#fff',
     textAlign: 'center',
+    fontFamily: 'Sen-Bold',
     paddingTop: 10,
     paddingBottom: 10,
-    fontWeight: 'bold',
     textTransform: 'uppercase',
   },
 });
