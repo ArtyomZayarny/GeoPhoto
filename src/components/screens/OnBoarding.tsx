@@ -1,15 +1,14 @@
-import {StyleSheet, View} from 'react-native';
+import {ImageBackground, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {Button} from '../button/button';
 import LinearGradient from 'react-native-linear-gradient';
 
 const Banner = () => {
   return (
-    <LinearGradient
-      colors={['#CFF3F2', '#FFE4ED']}
-      start={{x: 0, y: 0}}
-      end={{x: 1, y: 0}}
-      style={{flex: 1}}></LinearGradient>
+    <ImageBackground
+      style={{flex: 1}}
+      source={require('../../../assets/images/onBoarding.jpg')}
+    />
   );
 };
 export const OnBoarding: React.FC = () => {
