@@ -1,10 +1,39 @@
-import {View, Text} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
+import {Button} from '../button/button';
+import LinearGradient from 'react-native-linear-gradient';
 
+const Banner = () => {
+  return (
+    <LinearGradient
+      colors={['#CFF3F2', '#FFE4ED']}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 0}}
+      style={{flex: 1}}></LinearGradient>
+  );
+};
 export const OnBoarding: React.FC = () => {
   return (
-    <View>
-      <Text>OnBoarding</Text>
+    <View style={{height: '100%'}}>
+      <Banner />
+      <LinearGradient
+        colors={['#CFF3F2', '#FFE4ED']}
+        style={styles.container}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 0}}>
+        <Button text={'Login'} />
+        <Button text={'Sign Up'} />
+      </LinearGradient>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+});
