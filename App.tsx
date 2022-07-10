@@ -10,13 +10,12 @@
 
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-
-import SignIn from './src/components/screens/SignIn';
+import {SignUp} from './src/components/screens/SignUp';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <SignIn />
+      <SignUp />
     </SafeAreaView>
   );
 };

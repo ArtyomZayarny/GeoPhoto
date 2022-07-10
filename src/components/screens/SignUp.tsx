@@ -1,10 +1,10 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-export const SignIn: React.FC = () => {
+export const SignUp: React.FC = () => {
   return (
     <View>
-      <Text>SignIn</Text>
+      <Text>SignUp</Text>
     </View>
   );
 };
