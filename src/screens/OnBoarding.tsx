@@ -2,6 +2,7 @@ import {ImageBackground, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {Button} from '../components/button/button';
 import LinearGradient from 'react-native-linear-gradient';
+import {theme} from '../theme';
 
 const Banner = () => {
   return (
@@ -16,12 +17,12 @@ export const OnBoarding: React.FC = () => {
     <View style={{height: '100%'}}>
       <Banner />
       <LinearGradient
-        colors={['#CFF3F2', '#FFE4ED']}
+        colors={[theme.colors.lightGreen, theme.colors.lightPink]}
         style={styles.container}
         start={{x: 0, y: 0}}
         end={{x: 1, y: 0}}>
-        <Button text={'Login'} />
-        <Button text={'Sign Up'} />
+        <Button text={'Login'} color={theme.colors.green} />
+        <Button text={'Sign Up'} color={theme.colors.pink} />
       </LinearGradient>
     </View>
   );

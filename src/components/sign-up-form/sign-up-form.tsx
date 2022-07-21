@@ -1,7 +1,7 @@
 import {View, TextInput, StyleSheet, Text, Image} from 'react-native';
 import React from 'react';
 import {TermsAndConditions} from '../terms-and-conditions/terms-and-conditions';
-import {Button} from '../button';
+import {Button, buttonTextStyle} from '../button';
 import {UserIcon} from '../icons/user-icon';
 import LinearGradient from 'react-native-linear-gradient';
 import {EmailIcon} from '../icons/email-icon';
@@ -61,14 +61,48 @@ export const SignUpForm: React.FC = () => {
           symbol
         </Text>
         <TermsAndConditions />
-        <Button text="Sign up" />
-        <Button text="Sign in with Apple" />
+        <View style={styles.buttonWrapper}>
+          <Button text="Sign up" width={'100%'} color={theme.colors.pink} />
+          <Text style={styles.logText}>Or log with:</Text>
+
+          <Button
+            content={
+              <View
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{marginRight: 20}}
+                  source={require('../../assets/icons/applelogo.png')}
+                />
+                <Text style={buttonTextStyle.buttonText}>
+                  Sign in with Apple
+                </Text>
+              </View>
+            }
+            width={'100%'}
+            color={theme.colors.green}
+          />
+        </View>
       </View>
     </LinearGradient>
   );
 };
 
 const styles = StyleSheet.create({
+  buttonWrapper: {
+    display: 'flex',
+  },
+  logText: {
+    fontSize: 13,
+    fontWeight: '400',
+    marginTop: 20,
+    marginBottom: 20,
+    textAlign: 'center',
+  },
   validatingText: {
     color: theme.colors.gray,
     fontSize: 13,
