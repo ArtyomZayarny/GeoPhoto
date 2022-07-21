@@ -1,6 +1,6 @@
 import {ImageBackground, StyleSheet, View} from 'react-native';
 import React from 'react';
-import {Button} from '../button/button';
+import {Button} from '../components/button/button';
 import LinearGradient from 'react-native-linear-gradient';
 
 const Banner = () => {

@@ -9,14 +9,15 @@
  */
 
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import {OnBoarding} from './src/components/screens/OnBoarding';
+import {View} from 'react-native';
+import {OnBoarding} from './src/screens/OnBoarding';
+import {SignUp} from './src/screens/SignUp';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <OnBoarding />
-    </SafeAreaView>
+    <View>
+      <SignUp />
+    </View>
   );
 };
 
