@@ -8,6 +8,7 @@ import {UserIcon} from '../icons/user-icon';
 interface InputProps {
   placeholder: string;
   icon: string;
+  type?: string;
 }
 
 const renderIcon = (icon: string) => {
@@ -23,13 +24,14 @@ const renderIcon = (icon: string) => {
   }
 };
 
-export const Input: React.FC<InputProps> = ({placeholder, icon}) => {
+export const Input: React.FC<InputProps> = ({placeholder, icon, type}) => {
   return (
     <View style={styles.inputContainer}>
       {icon && <View style={styles.inputIcon}>{renderIcon(icon)}</View>}
       <TextInput
         style={styles.input}
-        placeholder="Your email"
+        placeholder={placeholder}
+        secureTextEntry={type === 'password'}
         placeholderTextColor={theme.colors.gray}
       />
     </View>

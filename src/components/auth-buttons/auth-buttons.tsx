@@ -14,10 +14,10 @@ const AppleContentButton = () => {
     </View>
   );
 };
-interface AuthButtonProps {
+interface AuthButtonsProps {
   type: 'sign up' | 'login';
 }
-export const AuthButton: React.FC<AuthButtonProps> = ({type}) => {
+export const AuthButtons: React.FC<AuthButtonsProps> = ({type}) => {
   return (
     <>
       <Button text={type} width={'100%'} color={theme.colors.pink} />

@@ -3,18 +3,18 @@ import React from 'react';
 import {BackGroundWrapper} from '../back-ground';
 import {MainWrapper} from '../../layout/main-wrapper/main-wrapper';
 import {Input} from '../input';
-import {AuthButton} from '../auth-button';
+import {AuthButtons} from '../auth-buttons';
 import {theme} from '../../theme';
 
 export const SignInForm: React.FC = () => {
   return (
-    <BackGroundWrapper>
+    <BackGroundWrapper style={{height: '100%'}}>
       <MainWrapper>
         <View style={{paddingTop: 40}}>
           <Input placeholder="Your email" icon="email" />
-          <Input placeholder="Your password" icon="password" />
+          <Input placeholder="Your password" icon="password" type="password" />
           <Text style={styles.forgotPassword}>Forgot your Password</Text>
-          <AuthButton type="login" />
+          <AuthButtons type="login" />
         </View>
       </MainWrapper>
     </BackGroundWrapper>

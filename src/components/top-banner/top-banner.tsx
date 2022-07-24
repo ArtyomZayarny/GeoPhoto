@@ -2,10 +2,10 @@ import {StyleSheet, ImageBackground} from 'react-native';
 import React from 'react';
 import {Logo} from '../logo';
 
-interface TopBanenrProps {
-  height: number;
+interface TopBannerProps {
+  height?: number;
 }
-export const TopBanner: React.FC<TopBanenrProps> = ({height = 250}) => {
+export const TopBanner: React.FC<TopBannerProps> = ({height = 250}) => {
   return (
     <ImageBackground
       source={require('../../assets/images/map.jpg')}
