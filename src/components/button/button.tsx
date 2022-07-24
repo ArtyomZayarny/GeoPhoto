@@ -2,7 +2,7 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 
 type ButtonProps = {
-  text: string;
+  text?: string;
   width?: number | string;
   color: string;
   content?: React.ReactNode;
@@ -17,19 +17,10 @@ export const Button: React.FC<ButtonProps> = ({
     <View>
       <TouchableOpacity
         activeOpacity={1}
-        style={{
-          backgroundColor: color,
-          borderRadius: 100,
-          width: width,
-          shadowColor: '#000000',
-          shadowOpacity: 0.8,
-          shadowRadius: 2,
-          elevation: 5,
-          shadowOffset: {
-            height: 1,
-            width: 1,
-          },
-        }}>
+        style={[
+          buttonTextStyle.button,
+          {width: width, backgroundColor: color},
+        ]}>
         <View>
           {content}
           {text && <Text style={buttonTextStyle.buttonText}>{text}</Text>}
@@ -48,5 +39,16 @@ export const buttonTextStyle = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     textTransform: 'uppercase',
+  },
+  button: {
+    borderRadius: 100,
+    shadowColor: '#000000',
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 5,
+    shadowOffset: {
+      height: 1,
+      width: 1,
+    },
   },
 });
