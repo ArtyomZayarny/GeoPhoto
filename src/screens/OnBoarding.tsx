@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <ImageBackground
       style={{flex: 1}}
-      source={require('../../assets/images/onBoarding.jpg')}
+      source={require('../assets/images/onBoarding.jpg')}
     />
   );
 };
