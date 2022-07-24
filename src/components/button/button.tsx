@@ -3,17 +3,24 @@ import React from 'react';
 
 type ButtonProps = {
   text: string;
+  width?: number | string;
+  color: string;
+  content?: React.ReactNode;
 };
-export const Button: React.FC<ButtonProps> = ({text}) => {
-  const backgroundColor = text === 'Login' ? '#256868' : '#E27085';
+export const Button: React.FC<ButtonProps> = ({
+  text,
+  width = 168,
+  color,
+  content,
+}) => {
   return (
     <View>
       <TouchableOpacity
         activeOpacity={1}
         style={{
-          backgroundColor: backgroundColor,
+          backgroundColor: color,
           borderRadius: 100,
-          width: 168,
+          width: width,
           shadowColor: '#000000',
           shadowOpacity: 0.8,
           shadowRadius: 2,
@@ -23,13 +30,16 @@ export const Button: React.FC<ButtonProps> = ({text}) => {
             width: 1,
           },
         }}>
-        <Text style={styles.buttonText}>{text}</Text>
+        <View>
+          {content}
+          {text && <Text style={buttonTextStyle.buttonText}>{text}</Text>}
+        </View>
       </TouchableOpacity>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+export const buttonTextStyle = StyleSheet.create({
   buttonText: {
     fontSize: 20,
     color: '#fff',
