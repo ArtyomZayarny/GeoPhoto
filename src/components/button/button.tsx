@@ -6,17 +6,20 @@ type ButtonProps = {
   width?: number | string;
   color: string;
   content?: React.ReactNode;
+  handlePress?: () => void;
 };
 export const Button: React.FC<ButtonProps> = ({
   text,
   width = 168,
   color,
   content,
+  handlePress,
 }) => {
   return (
     <View>
       <TouchableOpacity
         activeOpacity={1}
+        onPress={handlePress}
         style={[
           buttonTextStyle.button,
           {width: width, backgroundColor: color},

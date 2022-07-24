@@ -13,13 +13,27 @@ const Banner = () => {
     />
   );
 };
-export const OnBoarding: React.FC = () => {
+export const OnBoarding: React.FC = ({navigation}) => {
+  const handleLogin = () => {
+    navigation.navigate('SignIn');
+  };
+  const handleSignUp = () => {
+    navigation.navigate('SignUp');
+  };
   return (
     <View style={{height: '100%'}}>
       <Banner />
       <BackGroundWrapper style={styles.container}>
-        <Button text={'Login'} color={theme.colors.green} />
-        <Button text={'Sign Up'} color={theme.colors.pink} />
+        <Button
+          text={'Login'}
+          color={theme.colors.green}
+          handlePress={handleLogin}
+        />
+        <Button
+          text={'Sign Up'}
+          color={theme.colors.pink}
+          handlePress={handleSignUp}
+        />
       </BackGroundWrapper>
     </View>
   );

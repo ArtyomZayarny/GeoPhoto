@@ -9,17 +9,10 @@
  */
 
 import React from 'react';
-import {View} from 'react-native';
-import {OnBoarding} from './src/screens/OnBoarding';
-import {SignIn} from './src/screens/SignIn';
-import {SignUp} from './src/screens/SignUp';
+import {RootNavigation} from './navigation';
 
 const App = () => {
-  return (
-    <View>
-      <SignIn />
-    </View>
-  );
+  return <RootNavigation />;
 };
 
 export default App;
