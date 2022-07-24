@@ -9,15 +9,10 @@
  */
 
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import {OnBoarding} from './src/components/screens/OnBoarding';
+import {RootNavigation} from './navigation';
 
 const App = () => {
-  return (
-    <SafeAreaView>
-      <OnBoarding />
-    </SafeAreaView>
-  );
+  return <RootNavigation />;
 };
 
 export default App;
