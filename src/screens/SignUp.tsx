@@ -23,7 +23,7 @@ export const SignUp: React.FC = () => {
 
 const style = StyleSheet.create({
   banner: {
-    height: 200,
+    height: 250,
     backgroundColor: 'aqua',
     display: 'flex',
     alignItems: 'center',
