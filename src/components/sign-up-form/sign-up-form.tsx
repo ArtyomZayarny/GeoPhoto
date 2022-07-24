@@ -1,12 +1,12 @@
-import {View, TextInput, StyleSheet, Text, Image} from 'react-native';
+import {View, TextInput, StyleSheet, Text} from 'react-native';
 import React from 'react';
 import {TermsAndConditions} from '../terms-and-conditions/terms-and-conditions';
-import {Button, buttonTextStyle} from '../button';
 import {UserIcon} from '../icons/user-icon';
 import LinearGradient from 'react-native-linear-gradient';
 import {EmailIcon} from '../icons/email-icon';
 import {LockIcon} from '../icons/lock-icon';
 import {theme} from '../../theme';
+import {AuthButton} from '../auth-button/auth-button';
 
 export const SignUpForm: React.FC = () => {
   return (
@@ -43,6 +43,7 @@ export const SignUpForm: React.FC = () => {
           <TextInput
             style={styles.input}
             placeholder="Your password"
+            secureTextEntry={true}
             placeholderTextColor={theme.colors.gray}
           />
         </View>
@@ -53,6 +54,7 @@ export const SignUpForm: React.FC = () => {
           <TextInput
             style={styles.input}
             placeholder="Confirm password"
+            secureTextEntry={true}
             placeholderTextColor={theme.colors.gray}
           />
         </View>
@@ -62,30 +64,7 @@ export const SignUpForm: React.FC = () => {
         </Text>
         <TermsAndConditions />
         <View style={styles.buttonWrapper}>
-          <Button text="Sign up" width={'100%'} color={theme.colors.pink} />
-          <Text style={styles.logText}>Or log with:</Text>
-
-          <Button
-            content={
-              <View
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                }}>
-                <Image
-                  style={{marginRight: 20}}
-                  source={require('../../assets/icons/applelogo.png')}
-                />
-                <Text style={buttonTextStyle.buttonText}>
-                  Sign in with Apple
-                </Text>
-              </View>
-            }
-            width={'100%'}
-            color={theme.colors.green}
-          />
+          <AuthButton />
         </View>
       </View>
     </LinearGradient>
@@ -95,13 +74,6 @@ export const SignUpForm: React.FC = () => {
 const styles = StyleSheet.create({
   buttonWrapper: {
     display: 'flex',
-  },
-  logText: {
-    fontSize: 13,
-    fontWeight: '400',
-    marginTop: 20,
-    marginBottom: 20,
-    textAlign: 'center',
   },
   validatingText: {
     color: theme.colors.gray,
