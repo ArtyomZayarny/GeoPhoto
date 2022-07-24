@@ -11,12 +11,13 @@
 import React from 'react';
 import {View} from 'react-native';
 import {OnBoarding} from './src/screens/OnBoarding';
+import {SignIn} from './src/screens/SignIn';
 import {SignUp} from './src/screens/SignUp';
 
 const App = () => {
   return (
     <View>
-      <SignUp />
+      <SignIn />
     </View>
   );
 };
