@@ -16,11 +16,17 @@ const AppleContentButton = () => {
 };
 interface AuthButtonsProps {
   type: 'sign up' | 'login';
+  onPress: () => void;
 }
-export const AuthButtons: React.FC<AuthButtonsProps> = ({type}) => {
+export const AuthButtons: React.FC<AuthButtonsProps> = ({type, onPress}) => {
   return (
     <>
-      <Button text={type} width={'100%'} color={theme.colors.pink} />
+      <Button
+        text={type}
+        width={'100%'}
+        color={theme.colors.pink}
+        handlePress={onPress}
+      />
       <Text style={styles.logText}>Or log with:</Text>
       <Button
         content={<AppleContentButton />}

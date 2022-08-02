@@ -9,6 +9,9 @@ interface InputProps {
   placeholder: string;
   icon: string;
   type?: string;
+  value?: string;
+  onChange: () => void;
+  onBlur: () => void;
 }
 
 const renderIcon = (icon: string) => {
@@ -24,7 +27,14 @@ const renderIcon = (icon: string) => {
   }
 };
 
-export const Input: React.FC<InputProps> = ({placeholder, icon, type}) => {
+export const Input: React.FC<InputProps> = ({
+  placeholder,
+  icon,
+  type,
+  value,
+  onBlur,
+  onChange,
+}) => {
   return (
     <View style={styles.inputContainer}>
       {icon && <View style={styles.inputIcon}>{renderIcon(icon)}</View>}
@@ -33,6 +43,9 @@ export const Input: React.FC<InputProps> = ({placeholder, icon, type}) => {
         placeholder={placeholder}
         secureTextEntry={type === 'password'}
         placeholderTextColor={theme.colors.gray}
+        value={value}
+        onBlur={onBlur}
+        onChangeText={onChange}
       />
     </View>
   );
